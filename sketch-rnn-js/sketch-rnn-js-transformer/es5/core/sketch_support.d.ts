@@ -1,0 +1,12 @@
+export declare function stringToUint8array(b64encoded: string): Uint8Array;
+export declare function stringToArray(b64encoded: string): Int16Array;
+export declare function gaussRandom(): number;
+export declare function randf(a: number, b: number): number;
+export declare function randi(a: number, b: number): number;
+export declare function randn(mu: number, std: number): number;
+export declare function birandn(mu1: number, mu2: number, std1: number, std2: number, rho: number): number[];
+export declare function sampleSoftmax(zSample: number[] | Float32Array): number;
+export declare function simplifyLine(V: number[][], tolerance?: number): number[][];
+export declare function simplifyLines(lines: number[][][], tolerance?: number): number[][][];
+export declare function linesToStrokes(rawData: number[][][]): number[][];
+export declare function lineToStroke(line: number[][], lastPoint: number[]): number[][];
