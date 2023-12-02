@@ -26,8 +26,16 @@ tensorflowjs_converter --input_format keras \
                        path/to/tfjs_target_dir  
 ```
 
-3. The model wieghts can then be initilized in tfjs  
+3. The model wieghts can then be initilized in tfjs as LayerModels in model.ts file:  
 ```
+  public encoder: tfl.LayersModel;
+  public decoder: tfl.LayersModel;
+  public input_to_embed_dense: tfl.LayersModel;
+
+  public wq_dense: tfl.LayersModel[] = new Array(4);
+  public wk_dense: tfl.LayersModel[] = new Array(4);
+  public wv_dense: tfl.LayersModel[] = new Array(4);
+  public concat_attention_to_decoder_output: tfl.LayersModel[] = new Array(4);
 
 ```
 
